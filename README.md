@@ -6,8 +6,6 @@ Main class: `me.alex.cosmicclientbootstrap.CosmicClientBootstrap`
 
 A standalone Cosmic client bootstrap for Spigot 1.8.8. Initializes client features, permissions, player headers, cooldowns, and world names when players join, and provides administrative packet commands and a reusable packet service.
 
-Adapted from the CosmicPrisons/CosmicCore packet module. CosmicCore, CosmicFramework, ACF, and Lombok are not needed by this plugin.
-
 ## Build
 
 Use JDK 17 or newer and Maven to build. The plugin is compiled to Java 8 bytecode and runs on Java 8 or newer.
@@ -51,8 +49,6 @@ Commands require `cosmic.admin` (operators by default). An omitted player target
 Aliases: `/clientpacket`, `/cpacket`, `/cpclient`. Highlight targets the block the recipient is looking at within ten blocks, using red. Operation integers are passed through as in the original module. Map image URLs must use HTTP or HTTPS, with positive dimensions.
 
 Other plugins can obtain `getPacketService()` from the main plugin instance. The service retains feature, permissions, headers, cooldowns, XP bar, XP text, XP values, titles, map images, highlights, and raw client packet helpers. Call it from the server thread. Reflection is retained for packet fields because the supplied CosmicClientAPI JAR has no setters for them; different API builds may require adaptation.
-
-Packet module provenance: `CosmicCore/src/main/java/dev/wishnote/core/modules/packet` in the supplied CosmicPrisons project. Plugin metadata credits CrazyLadAlex; the packet service and handshake are adapted from that existing module.
 
 ## License
 
