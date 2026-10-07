@@ -1,0 +1,16 @@
+name: CosmicClientBootstrap
+version: ${project.version}
+main: me.alex.cosmicclientbootstrap.CosmicClientBootstrap
+author: CrazyLadAlex
+description: Bootstraps Cosmic client features and exposes client packet helpers.
+depend: [CosmicClientAPI, DemonicClientComms, ProtocolLib]
+commands:
+  packets:
+    description: Send Cosmic client packets or repeat the join bootstrap.
+    aliases: [clientpacket, cpacket, cpclient]
+    permission: cosmic.admin
+    usage: /<command> help
+permissions:
+  cosmic.admin:
+    description: Allows sending Cosmic client packets.
+    default: op
